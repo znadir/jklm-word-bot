@@ -1,5 +1,6 @@
 # Word Bot for JKLM Bomb Party [WORKING]
-A bot for Bomb Party on https://www.jklm.fun (Only English)
+
+A bot for Bomb Party on https://www.jklm.fun
 
 <h1>Requirements</h1>
 <ul>
@@ -24,16 +25,21 @@ A bot for Bomb Party on https://www.jklm.fun (Only English)
 <h1>Settings:</h1>
 
 ```
+# Set this to your language.
+lang = "en"
 # Set this to True for long words (Not recommended if you want to look a little bit legit.).
 long_words = True/False
 # Set this to True for instant typing (Not recommended if you want to look a little bit legit.)
 instant_typing = True/False
 ```
+
 <br/>
 
 # Bot Demonstrations
-__Bot with long_words and instant_typing set to False:__<br/><br/>
+
+**Bot with long_words and instant_typing set to False:**<br/><br/>
 ![Alt Text](https://media3.giphy.com/media/o4th7luaOHKE5VSNCP/giphy.gif?cid=790b76111d9a71f16cf4156156fae80597969b954e602ddf&rid=giphy.gif&ct=g)<br/><br/>
-__Bot with long_words and instant_typing set to True:__<br/><br/>
+**Bot with long_words and instant_typing set to True:**<br/><br/>
 ![Alt Text](https://media1.giphy.com/media/kpj8Y6kZY2M9rX1JPV/giphy.gif?cid=790b76111cd4ef924a3ee94fea352194116eae4ccdda2ff9&rid=giphy.gif&ct=g)
+
 # Enjoy the bot!

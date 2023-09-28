@@ -3,9 +3,9 @@ import pyautogui
 import pyperclip
 import random
 import time
-import sys
 import os
 
+lang = "en"
 bomb_x = ""
 bomb_y = ""
 delays = [0.03, 0.04, 0.05, 0.06, 0.4]
@@ -14,7 +14,12 @@ instant_typing = False
 pyautogui.PAUSE = 0
 used_words = set()
 
-with open('wordlist.txt') as word_file:
+if lang not in ["en", "fr"]:
+    raise Exception("Unsupported language.")
+
+wordlist_path = os.path.join(os.path.dirname(__file__), f"./wordlists/{lang}.txt")
+
+with open(wordlist_path) as word_file:
     valid_words = word_file.read().split()
 
 def release(key):
@@ -33,7 +38,7 @@ def release(key):
             time.sleep(0.1)
             syllable = pyperclip.paste().lower().strip()
             pyperclip.copy('')
-            found_words = [word for word in valid_words if syllable in word]
+            found_words = [word for word in valid_words if syllable in word.lower()]
             
             if not found_words:
                 print("No words were found.")
