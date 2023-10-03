@@ -5,7 +5,7 @@ import random
 import time
 import os
 
-lang = "en"
+lang = "fr"
 bomb_x = ""
 bomb_y = ""
 delays = [0.03, 0.04, 0.05, 0.06, 0.4]
@@ -14,12 +14,12 @@ instant_typing = False
 pyautogui.PAUSE = 0
 used_words = set()
 
-if lang not in ["en", "fr"]:
+if lang not in ["en", "fr", "es"]:
     raise Exception("Unsupported language.")
 
 wordlist_path = os.path.join(os.path.dirname(__file__), f"./wordlists/{lang}.txt")
 
-with open(wordlist_path) as word_file:
+with open(wordlist_path, encoding='Latin1') as word_file:
     valid_words = word_file.read().split()
 
 def release(key):
